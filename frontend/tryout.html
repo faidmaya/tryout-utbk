@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <title>BIMBEL SMARRT – Tryout UTBK</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-100 min-h-screen">
+
+  <!-- HEADER -->
+  <header class="max-w-6xl mx-auto px-6 py-5 flex justify-between items-center">
+    <h1 class="text-3xl font-extrabold text-blue-900 tracking-widest">
+      BIMBEL SMARRT
+    </h1>
+
+    <div class="bg-red-200 text-red-800 px-5 py-2 rounded-xl font-bold shadow">
+      ⏱ <span id="timer">00:00</span>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main class="max-w-4xl mx-auto p-6">
+
+    <h2 id="subtest-title" class="text-lg font-semibold text-blue-800 mb-4">
+      Subtest
+    </h2>
+
+    <div id="nav" class="flex flex-wrap gap-2 mb-6"></div>
+
+    <div id="question-box" class="bg-white p-6 rounded-xl shadow"></div>
+
+    <div class="flex justify-between mt-6">
+      <button onclick="prev()" class="px-4 py-2 bg-gray-300 rounded">Prev</button>
+      <button onclick="next()" class="px-4 py-2 bg-blue-700 text-white rounded">Next</button>
+    </div>
+
+    <div class="flex justify-center mt-8">
+      <button
+        onclick="submitTryout()"
+        class="bg-blue-700 text-white px-10 py-3 rounded-xl font-bold"
+      >
+        Submit
+      </button>
+    </div>
+
+  </main>
+
+  <!-- SCRIPTS (WAJIB DI BAWAH) -->
+  <script src="js/questions.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/timer.js"></script>
+
+</body>
+</html>
