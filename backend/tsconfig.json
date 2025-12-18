@@ -2,12 +2,12 @@
     "compilerOptions": {
       "target": "ES2020",
       "module": "CommonJS",
-      "rootDir": "src",
-      "outDir": "dist",
+      "rootDir": "src",          // root file TS ada di folder src
+      "outDir": "dist",          // hasil compile masuk dist/
       "strict": true,
       "esModuleInterop": true,
       "skipLibCheck": true
     },
-    "include": ["src"]
+    "include": ["src/**/*"]      // compile semua file TS di src dan subfolder
   }
   
