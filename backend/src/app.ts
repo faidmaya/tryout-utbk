@@ -21,21 +21,17 @@ app.use('/api/submit', submitRoutes);
 app.use('/api/progress', progressRoutes);
 
 /**
- * SERVE FRONTEND (STATIC)
+ * SERVE STATIC FRONTEND
+ * (folder: tryout-app/frontend)
  */
-app.use(
-  express.static(
-    path.join(__dirname, '../../frontend')
-  )
-);
+const frontendPath = path.resolve(__dirname, '../../frontend');
+app.use(express.static(frontendPath));
 
 /**
- * DEFAULT PAGE
+ * ROOT → login.html
  */
 app.get('/', (_req, res) => {
-  res.sendFile(
-    path.join(__dirname, '../../frontend/login.html')
-  );
+  res.sendFile(path.join(frontendPath, 'login.html'));
 });
 
 export default app;
