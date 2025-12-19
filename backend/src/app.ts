@@ -22,9 +22,10 @@ app.use('/api/progress', progressRoutes);
 
 /**
  * SERVE STATIC FRONTEND
- * (folder: tryout-app/frontend)
+ * runtime: backend/dist
+ * target : backend/frontend
  */
-const frontendPath = path.resolve(__dirname, '../../frontend');
+const frontendPath = path.resolve(__dirname, '../frontend');
 app.use(express.static(frontendPath));
 
 /**
